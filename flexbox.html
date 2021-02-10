@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FlexBox</title>
+        <style>
+            *{
+                   margin: 2px;
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                text-align: center;
+        
+
+            }
+            
+            .container {
+                border: 6px solid orange;
+                display: flex;
+                font-size: 25px;
+                text-align: center;
+                flex-direction:row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                justify-content: space-around;
+                justify-content: space-between;
+                align-items:center;
+                align-items: flex-end;
+                align-items: stretch;
+                align-items: flex-start;
+                height: auto;
+                align-content: center;
+                align-content: flex-start;
+                align-content: space-around;/*align content deal with lines*/
+                flex-wrap: wrap;
+                justify-content: center;
+                
+
+
+            } 
+
+             .flex-itiem{
+                 width: 7rem;
+                 flex-shrink: 0;/*ishould use width with flex-shrink and flex-shrink :0 prevent elements from shrinking*/
+                 flex-basis: 200px;
+                 flex-shrink: 5;
+            
+             }
+
+            .itiem1 {
+                background: linear-gradient(pink,red);
+                order: 0;            
+
+            }
+            .itiem2{
+                background: linear-gradient(pink,white);
+               /* order: 1;become at the last as all itiems takes order number0*/                
+            }
+
+            .itiem3 {
+                background: linear-gradient(pink,purple);
+                flex-shrink: 4;
+            }
+
+            .itiem4 {
+                background: linear-gradient(pink,orange);
+        
+            }
+
+            .itiem5 {
+                background: linear-gradient(pink,black);
+                flex-shrink: 5;
+            }
+
+            .itiem6 {
+                background: linear-gradient(pink,gray);
+                flex-shrink: 5;
+            }
+
+
+            
+            
+
+            nav {
+                background-color: gainsboro;
+                font-size: 20px;
+                } 
+
+            nav ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;     
+                 }
+            
+    
+            nav ul li {
+            
+                cursor: pointer;
+                padding: .3rem;
+                flex:auto;
+                text-align: center;
+                
+            }
+
+            nav ul li:hover {
+                background-color:white;
+            }
+
+            @media all and (max-width:400px) {
+                nav ul {
+                    flex-direction: column;
+                }
+
+                .cont1 {
+                    flex-direction: column;
+    
+                }
+                
+            }
+
+            .cont1 {
+                background-color: pink;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+
+            .cont1 img {  
+
+                height: 200px;
+                padding: .3rem;
+                flex: auto;  
+            }
+
+
+            @media all and (max-width:700px){
+            
+                .cont2 {
+                
+                    flex-wrap: wrap;
+                }
+            }
+           .cont2 {
+               background-color: lightgray;
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+        
+               
+               
+           }
+           .cont2 img {
+            flex-grow: 1;
+            width: 400px;
+           }
+           .cont2 p {
+               padding: 3rem;
+               flex-grow: 4;
+               
+           }
+        </style>
+    </head>
+
+    <body>
+      
+        <div class="container">
+         <div class="flex-itiem itiem1">itiem1</div>
+         <div class="flex-itiem itiem2">itiem2</div>
+         <div class="flex-itiem itiem3">itiem3</div>
+         <div class="flex-itiem itiem4">itiem4</div>
+         <div class="flex-itiem itiem5">itiem5</div>
+         <div class="flex-itiem itiem6">itiem6</div>
+        </div>
+   
+
+         <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>potifilio</li>
+                <li>contactus</li>
+            
+            </ul>
+         </nav>
+    
+            <div class="cont1">
+
+        
+                <img src="images/dog.jpg" class="flex-image1" alt="dog">
+                <img src="images/dog.jpg" class="flex-image2" alt="dog" >
+                <img src="images/dog.jpg" class="flex-image3" alt="dog" >
+                <img src="images/dog.jpg" class="flex-image1" alt="dog">
+                <img src="images/dog.jpg" class="flex-image2" alt="dog" >
+                <img src="images/dog.jpg" class="flex-image3" alt="dog" >
+                <img src="images/dog.jpg" class="flex-image1" alt="dog">
+                <img src="images/dog.jpg" class="flex-image2" alt="dog">
+                <img src="images/dog.jpg" class="flex-image3" alt="dog">
+                <img src="images/dog.jpg" class="flex-image1" alt="dog">
+                <img src="images/dog.jpg" class="flex-image2" alt="dog" >
+                <img src="images/dog.jpg" class="flex-image3" alt="dog" >
+
+            </div>
+
+
+            <div class="cont2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate necessitatibus suscipit nam totam earum soluta laborum quam optio similique corrupti perspiciatis numquam obcaecati, accusamus cumque dignissimos sit sed a.</p>
+                <img src="./images/dog.jpg" alt="dog">
+            </div>
+
+            <div class="cont2">
+                <img src="./images/dog.jpg" alt="dog">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate necessitatibus suscipit nam totam earum soluta laborum quam optio similique corrupti perspiciatis numquam obcaecati, accusamus cumque dignissimos sit sed a.</p>
+               
+            </div>
+
+            <div class="cont2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate necessitatibus suscipit nam totam earum soluta laborum quam optio similique corrupti perspiciatis numquam obcaecati, accusamus cumque dignissimos sit sed a.</p>
+                <img src="./images/dog.jpg" alt="dog">
+            </div>
+
+            <div class="cont2">
+                <img src="./images/dog.jpg" alt="dog">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae cupiditate necessitatibus suscipit nam totam earum soluta laborum quam optio similique corrupti perspiciatis numquam obcaecati, accusamus cumque dignissimos sit sed a.</p>
+               
+            </div>
+
+    </body>
+</html>
